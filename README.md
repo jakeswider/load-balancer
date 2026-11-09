@@ -1,9 +1,7 @@
 # load-balancer
 
-A layer 4 TCP load balancer in C++20. Each shard runs its own epoll loop and SO_REUSEPORT listener,
+A layer 4 TCP load balancer in C++20, each shard runs its own epoll loop and SO_REUSEPORT listener,
 spreads connections across backends with round-robin, and drains open connections on SIGTERM.
-
-## Benchmarks
 
 Apple M1, Docker, loopback, 1 KiB echo.
 
